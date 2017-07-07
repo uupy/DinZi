@@ -6,11 +6,8 @@
 			</el-col>
 			<el-col class='nav' :span='19' :xs='20'>
 				<el-col :span='3' class='header-title'>
-					<el-row :xs='4'>
-						<img src="../../static/images/title.png">
-					</el-row>
 					<el-row>
-						<img src="../../static/images/sub-title.png">
+						<img src="../../static/images/sub-title.svg">
 					</el-row>
 				</el-col>
 
@@ -58,7 +55,7 @@
 	.logo img{height:70%;vertical-align: middle;position: absolute;left: 50%;top:46%;-webkit-transform:translateY(-50%) translateX(-50%);}
 	.nav{position:relative;height: @pageHeight;background: url('../../static/images/nav.png')} 
 	.header-title{display: flex;flex-direction: column;justify-content: center;height: @pageHeight;padding-left: 6px;}
-	.header-title img{width: 70%;margin:5px 0;}
+	.header-title img{margin:5px 0;}
 	.nav-title{height: @pageHeight;text-align: right;}
 	.navigator{height: 100%;line-height: @pageHeight;}
 	.navigator li{float: right;}
@@ -72,7 +69,7 @@
 	.header-share ul li a:hover .iconfont{color:#d7a717;}
 	.header-share ul li img{width: 20px;vertical-align: middle;display: block;position: absolute;left: 50%;top:50%;-webkit-transform:translateY(-50%) translateX(-50%);}
 	/*.header-wrap{min-width: 768px}*/
-	.menu-button{width:20px;display: none;text-align: right;position: absolute;right: 20px;cursor: pointer;height: 100%;}
+	.menu-button{width:20px;height:20px;display: none;text-align: right;position: absolute;right: 20px;cursor: pointer;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);}
 	.menu-button i{vertical-align: middle;}
 	.mobile-menu{position: fixed;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.8)}
 
@@ -101,7 +98,6 @@
 		.nav{width: 80%;}
 		.logo{width: 20%}
 		.menu-button i{font-size: 20px;}
-		.menu-button{margin-top: 24px}
 		.pageheader{position: fixed;left: 0;top: 0;width: 100%;}
 		.mobile-menu{top:@pageHeight;}
 	}
@@ -131,8 +127,9 @@
 		.logo{padding-left: 20px}
 		.logo img{width: 85%;}
 		.pageheader{position: fixed;left: 0;top: 0;width: 100%;}
-		.menu-button{margin-top: 0}
 		.mobile-menu{top:@pageHeight;}
+		.menu-button{top:0;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
+
 	}
 
 </style>
@@ -144,10 +141,10 @@
 		data(){
 			return {
 				navList:[
-					{name:'最新动态',path:'/info'},
+					{name:'最新动态',path:'/news'},
 					{name:'关于丁子',path:'/about'},
 					{name:'品牌案例',path:'/case'},
-					{name:'首页',path:'/'},
+					{name:'首页',path:'/index'},
 				],
 				shareLink:[
 					{icon:'icon-weixin'},
