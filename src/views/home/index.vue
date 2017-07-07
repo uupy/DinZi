@@ -5,7 +5,8 @@
 				<v-banner :bannerDatas="banners"></v-banner>
 			</el-col>
 			<el-col class="home_content">
-				<!-- <img src='../../../static/images/banner_home_01.jpg' /> -->
+				<el-col class='case-wrap'>
+				</el-col>
 			</el-col>
 		</el-col>
 	</el-row>

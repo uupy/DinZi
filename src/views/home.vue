@@ -42,6 +42,7 @@
 	@headerHeight:110px;
 	.app-wrapper{height: 100%;overflow-x: scroll;}
 	.page_content{background: #fff;}
+	.optiscroll-vtrack{width: 6px;}
 
 	@media screen and (max-width: 768px) {
 		@pageHeight:70px;
