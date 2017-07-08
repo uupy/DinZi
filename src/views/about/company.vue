@@ -15,4 +15,11 @@
 	.company-txt{margin-left: 65px;}
 	.company-txt h3{font-size: 36px;font-weight: normal;line-height: 1;margin-bottom: 30px;}
 	.company-txt p{line-height: 2.4;text-indent: 1em;text-align: justify;}
+
+	@media screen and (max-device-width:768px){
+		
+	}
+	@media screen and (max-width:768px){
+		
+	}
 </style>
