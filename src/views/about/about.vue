@@ -7,7 +7,7 @@
 			<el-col :span='22' :offset='1' class='about-inner'>
 				<el-col :span='2' class='about-nav'>
 					<ul>
-						<li v-for='item in aboutNav'>
+						<li v-for='item in aboutNav' :key='item.name'>
 							<router-link :to='{path:item.link}'>{{item.name}}</router-link>
 						</li>
 					</ul>

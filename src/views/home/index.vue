@@ -8,7 +8,7 @@
 				<el-col class='case-list'>
 					<el-col>
 						<el-col class='case-wrap'>
-							<el-col v-if='index!=caseList.length-1' v-for='(item,index) in caseList' @click='goCase'>
+							<el-col v-if='index!=caseList.length-1' :key='index' v-for='(item,index) in caseList' @click='goCase'>
 								<img :src='item.img' />
 								<span class="case-cover">
 								</span>
@@ -274,10 +274,10 @@
 
 			},
 			moreCase(){
-
+				this.$router.push({path:'case'})
 			},
 			joinDinz(){
-
+				this.$router.push({path:'/join-us'})
 			}
 		},
 		components:{ 
