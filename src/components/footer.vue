@@ -56,7 +56,7 @@
 	</el-row>
 </template>
 <style scoped>
-	.footer{background: #333;padding:2rem 0;width: 100%;font-size: 14px}
+	.footer{background: #333;padding:2rem 0;width: 100%;font-size: 14px;clear:both;}
 	.dz_ewm{text-align: right;box-sizing: border-box;}
 	.dz_ewm img{max-width: 140px;display: inline;width: 100%}
 	.dz_title img:nth-child(2){margin-left: 6px;max-width: 125px;margin:6px;width: 100%}
