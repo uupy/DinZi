@@ -1,6 +1,6 @@
 <template>
 	<div class="app-wrapper optiscroll" id='app-wrapper'>
-		<pageheader id='pageheader'></pageheader>
+		<pageheader id='pageheader' class='pageheader'></pageheader>
 		<div class="page_content" id='page_content'>
 			<router-view></router-view>
 		</div>
@@ -41,8 +41,9 @@
 <style lang='less'>
 	@headerHeight:110px;
 	.app-wrapper{height: 100%;overflow-x: scroll;}
-	.page_content{background: #fff;}
+	.page_content{background: #fff;position: relative;z-index: 66666;}
 	.optiscroll-vtrack{width: 6px;}
+	.pageheader{position: relative;z-index: 9999999;}
 
 	@media screen and (max-width: 768px) {
 		@pageHeight:70px;
