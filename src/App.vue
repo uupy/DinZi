@@ -12,7 +12,8 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;  
+  /*font-family: 'Avenir', Helvetica, Arial, sans-serif; */
+  font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif,"SimSun";  
   height: 100%;overflow: hidden;
 }
 *{margin:0;padding:0;}
