@@ -101,4 +101,14 @@
 	.pages_banner .swiper-pagination-bullet{width: 12px;height: 12px;border-radius: 12px; background: #fff;opacity: 1;}
 	.pages_banner .swiper-pagination-bullet-active{background: #FFD201;}
 	.swiper-button-next i,.swiper-button-prev i{color:#fff;}
+
+	@media screen and (max-width: 768px) {
+		.pages_banner .swiper-pagination-bullet{width: 8px;height: 8px;}
+		.swiper-container-horizontal > .swiper-pagination-bullets{bottom: 2px;}
+	}
+
+	@media screen and (max-device-width:768px){
+		.pages_banner .swiper-pagination-bullet{width: 8px;height: 8px;}
+		.swiper-container-horizontal > .swiper-pagination-bullets{bottom: 2px;}
+	}
 </style>
