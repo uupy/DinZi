@@ -8,6 +8,7 @@
 				<el-col :span='3' class='header-title'>
 					<el-row>
 						<img src="../../static/images/sub-title.svg">
+						<!-- <i class="iconfont icon-sub-title"></i> -->
 					</el-row>
 				</el-col>
 
@@ -99,7 +100,7 @@
 		.nav{width: 80%;}
 		.logo{width: 20%}
 		.menu-button i{font-size: 20px;}
-		.pageheader{position: fixed;left: 0;top: 0;width: 100%;}
+		.pageheader{position: fixed;left: 0;top: 0;width: 100%;z-index: 99999;}
 		.mobile-menu{top:@pageHeight;}
 	}
 
@@ -127,7 +128,7 @@
 		.menu-button i{font-size: 20px;}
 		.logo{padding-left: 20px}
 		.logo img{width: 85%;}
-		.pageheader{position: fixed;left: 0;top: 0;width: 100%;}
+		.pageheader{position: fixed;left: 0;top: 0;width: 100%;z-index: 99999}
 		.mobile-menu{top:@pageHeight;}
 		.menu-button{top:0;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
 
