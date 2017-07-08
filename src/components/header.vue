@@ -71,9 +71,9 @@
 	/*.header-wrap{min-width: 768px}*/
 	.menu-button{width:20px;height:20px;display: none;text-align: right;position: absolute;right: 20px;cursor: pointer;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);}
 	.menu-button i{vertical-align: middle;}
-	.mobile-menu{position: fixed;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.8)}
+	.mobile-menu{position: fixed;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.8);z-index: 99999;}
 
-	.mobile-nav{box-shadow: -2px 2px 2px #000;}
+	.mobile-nav{box-shadow: 2px -2px 2px #222;}
 	.mobile-nav li {border-bottom: 1px solid #252525;background: #1b1b1b;}
 	.mobile-nav li a{color:#eee;padding: 18px 30px;width: 100%;text-align: center;display: inline-block;box-sizing: border-box;
 		
