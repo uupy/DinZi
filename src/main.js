@@ -7,6 +7,7 @@ import {Row,Col} from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import 'optiscroll/dist/optiscroll.css'
 import Optiscroll from 'optiscroll'
+// import Global from './assets/js/global.js'
 
 Vue.use(Row)
 Vue.use(Col)
