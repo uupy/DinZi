@@ -14,7 +14,7 @@ Vue.use(Col)
 Vue.config.productionTip = false
 //默认进入首页
 router.beforeEach(function(to,from,next){
-	if (to.path === '/' || to.path === '') {
+	  if (to.path === '/' || to.path === '') {
         next({
             path: '/index'
         })

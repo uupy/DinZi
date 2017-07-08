@@ -142,7 +142,7 @@
 			return {
 				navList:[
 					{name:'最新动态',path:'/news'},
-					{name:'关于丁子',path:'/about'},
+					{name:'关于丁子',path:'/company'},
 					{name:'品牌案例',path:'/case'},
 					{name:'首页',path:'/index'},
 				],
