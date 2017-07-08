@@ -15,4 +15,20 @@
 	.company-txt{margin-left: 65px;}
 	.company-txt h3{font-size: 36px;font-weight: normal;line-height: 1;margin-bottom: 30px;}
 	.company-txt p{line-height: 2.4;text-indent: 1em;text-align: justify;}
+	@media screen and (max-device-width:768px){
+		.company-img,.company-txt{width: 100%;margin-left: 0;}
+		.company-img img{border:none;}
+		.company-wrap{padding: 1rem;}
+		.company-txt h3{text-align: center;font-size: 20px;margin:1rem;margin-top: 2rem;}
+		.company-txt p{font-size: 1.2;padding: 0 1rem;font-size: 14px;}
+		
+	}
+	@media screen and (max-width:768px){
+		.company-img,.company-txt{width: 100%;margin-left: 0;}
+		.company-img img{border:none;}
+		.company-wrap{padding: 1rem;}
+		.company-txt h3{text-align: center;font-size: 20px;margin:1rem;margin-top: 2rem;}
+		.company-txt p{font-size: 1.2;padding: 0 1rem;font-size: 14px;}
+		
+	}
 </style>

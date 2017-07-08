@@ -34,14 +34,14 @@
 
 	@media screen and (max-device-width:768px){
 		.about-nav,.about-inner,.about-views,.company-img{width: 100%;margin-left: 0;}
-		.about-nav li{font-size: 14px;flex: 1;text-align: center;}
+		.about-nav li{font-size: 14px;flex: 1;text-align: center;padding: .5rem 0}
 		.about-content{padding: 1rem 0;}
 		.about-nav ul{display: flex;flex-direction: row;}
 		.about-nav{height: auto;}
 	}
 	@media screen and (max-width:768px){
 		.about-nav,.about-inner,.about-views,.company-img{width: 100%;margin-left: 0;}
-		.about-nav li{font-size: 14px;flex: 1;text-align: center;}
+		.about-nav li{font-size: 14px;flex: 1;text-align: center;padding: .5rem 0}
 		.about-content{padding: 1rem 0;}
 		.about-nav ul{display: flex;flex-direction: row;}
 		.about-nav{height: auto;}
@@ -59,7 +59,7 @@
 				aboutNav:[
 					{name:'公司介绍',link:'/company'},
 					{name:'丁子观点',link:'/points'},
-					{name:'加入我们',link:'/join-us'},
+					{name:'人才招聘',link:'/join-us'},
 					{name:'合作伙伴',link:'/coorper'},
 					{name:'联系我们',link:'/contact'},
 				]

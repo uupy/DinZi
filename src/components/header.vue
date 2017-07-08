@@ -73,8 +73,9 @@
 	.menu-button i{vertical-align: middle;}
 	.mobile-menu{position: fixed;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.8)}
 
-	.mobile-nav li {border-bottom: 1px solid #3c3b3b;}
-	.mobile-nav li a{color:#d7a717;padding: 18px 30px;width: 100%;text-align: center;display: inline-block;box-sizing: border-box;
+	.mobile-nav{box-shadow: -2px 2px 2px #000;}
+	.mobile-nav li {border-bottom: 1px solid #252525;background: #1b1b1b;}
+	.mobile-nav li a{color:#eee;padding: 18px 30px;width: 100%;text-align: center;display: inline-block;box-sizing: border-box;
 		
 	}
 	.mobile-nav li a.router-link-active{background: none;}
