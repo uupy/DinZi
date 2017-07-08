@@ -31,6 +31,13 @@
 	.about-nav li a:hover{color:#FDD001;}
 
 	.about-views{border-top: 1px solid #ebebeb}
+
+	@media screen and (max-device-width:768px){
+		.about-nav{width: 100%;}
+	}
+	@media screen and (max-width:768px){
+		.about-nav{width: 100%;}
+	}
 </style>
 <script>
 	import Banner1 from '../../../static/images/banner_inner_01.jpg'
