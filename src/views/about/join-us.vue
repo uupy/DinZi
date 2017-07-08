@@ -51,7 +51,7 @@
 		.more-txt{width: 20%;}
 		.more-txt i{font-size: 18px;}
 		.item-list:last-child .item-list h3{display: none;}
-		.item-list{padding: 2rem 0 1.5rem 0;}
+		.item-list{padding: 2.5rem 0 1.5rem 0;}
 		.mobile-left{width: 0;}
 		.mobile-txt{width: 100%;box-sizing: border-box;}
 		.job-demans,.job-wrap2{width: 100%;height: 0;}
@@ -65,7 +65,7 @@
 		.more-txt{width: 20%;}
 		.more-txt i{font-size: 18px;}
 		.item-list:last-child .item-list h3{display: none;}
-		.item-list{padding: 2rem 0 1.5rem 0;}
+		.item-list{padding: 2.5rem 0 1.5rem 0;}
 		.mobile-left{width: 0;}
 		.mobile-txt{width: 100%;box-sizing: border-box;}
 		.job-demans,.job-wrap2{width: 100%;height: 0;}
