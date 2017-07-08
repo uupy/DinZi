@@ -1,7 +1,7 @@
 <template>
 	<el-col class='company-wrap'>		
 		<el-col class='company-txt'>
-			<el-col v-for='(item,index) in dataList' class='item-list'>
+			<el-col v-for='(item,index) in dataList' :key='index' class='item-list'>
 				<div>
 					<el-col :span='4' class='item-date'>
 						<p>{{item.date}}</p>
@@ -19,7 +19,7 @@
 					<el-col :span='20' class='job-wrap job-wrap2' :class='item.isShow?"showmore":""'>
 						<p v-if='index!=dataList.length-1'>职位要求：</p>
 						<el-col class='job-demans'>
-							<p v-for='demans in item.demans'>{{demans.title}}</p>
+							<p v-for='(demans,index) in item.demans' :key='index'>{{demans.title}}</p>
 						</el-col>
 					</el-col>	
 				</el-row>				
