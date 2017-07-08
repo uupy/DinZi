@@ -33,10 +33,18 @@
 	.about-views{border-top: 1px solid #ebebeb}
 
 	@media screen and (max-device-width:768px){
-		.about-nav{width: 100%;}
+		.about-nav,.about-inner,.about-views,.company-img{width: 100%;margin-left: 0;}
+		.about-nav li{font-size: 14px;flex: 1;text-align: center;}
+		.about-content{padding: 1rem 0;}
+		.about-nav ul{display: flex;flex-direction: row;}
+		.about-nav{height: auto;}
 	}
 	@media screen and (max-width:768px){
-		.about-nav{width: 100%;}
+		.about-nav,.about-inner,.about-views,.company-img{width: 100%;margin-left: 0;}
+		.about-nav li{font-size: 14px;flex: 1;text-align: center;}
+		.about-content{padding: 1rem 0;}
+		.about-nav ul{display: flex;flex-direction: row;}
+		.about-nav{height: auto;}
 	}
 </style>
 <script>
