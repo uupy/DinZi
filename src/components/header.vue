@@ -49,6 +49,7 @@
 </template>
 <style scoped lang='less'>
 	@pageHeight:110px;
+	.header-title i.iconfont{font-size: 56px;color:#d7a717;}
 
 	.pageheader{height: @pageHeight;background: #1B1B1B;z-index: 9999}
 	.logo{text-align: left;position: relative;height: @pageHeight;}
