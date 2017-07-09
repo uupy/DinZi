@@ -6,13 +6,16 @@ import router from './router'
 import {Row,Col} from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import 'optiscroll/dist/optiscroll.css'
+import './assets/css/animate.css'
 import Optiscroll from 'optiscroll'
+import $ from 'jquery'
 // import Global from './assets/js/global.js'
 
 Vue.use(Row)
 Vue.use(Col)
 
-Vue.config.productionTip = false
+window.$ = $;
+Vue.config.productionTip = false;
 //默认进入首页
 router.beforeEach(function(to,from,next){
 	  if (to.path === '/' || to.path === '') {

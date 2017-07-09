@@ -1,6 +1,6 @@
 <template>
 	<section class="case_wrapper">
-		<el-row class="case_content1">
+		<el-row class="case_content case_content1">
 			<el-col :span="12" :xs="0" class="case_left">
 				<p>致力成为海南省 农业丨文化丨旅游 地域IP品牌</p>
 				<img src="../../assets/images/img_mh_01.png" alt="">
@@ -16,7 +16,7 @@
 			</el-col>
 			<i class="line"></i>
 		</el-row>
-		<el-row class="case_content2">
+		<el-row class="case_content case_content2">
 			<el-col :span="12" :xs="24" class="case_left">
 				<p class="mh_logo">
 					<img src="../../assets/images/img_mh_01.png" alt="">
@@ -44,7 +44,7 @@
 			</el-col>
 			<i class="line"></i>
 		</el-row>
-		<el-row class="case_content3">
+		<el-row class="case_content case_content3">
 			<el-col :span="12" :xs="24" class="case_left">
 				<p class="mh_logo">
 					<img src="../../assets/images/img_mh_01.png" alt="">
@@ -61,7 +61,7 @@
 			</el-col>
 			<i class="line"></i>
 		</el-row>
-		<el-row class="case_content4">
+		<el-row class="case_content case_content4">
 			<el-col :span="12" :xs="24" class="case_left">
 				<el-col :span="12">
 					<img src="../../assets/images/img_mh_03.png" alt="">
@@ -86,7 +86,7 @@
 			</el-col>
 			<i class="line"></i>
 		</el-row>
-		<el-row class="case_content5">
+		<el-row class="case_content case_content5">
 			<el-col :span="12" :xs="24" class="case_left">
 				<p class="mh_logo">
 					<img src="../../assets/images/img_mh_01.png" alt="">
@@ -113,10 +113,10 @@
 			</el-col>
 			<i class="line"></i>
 		</el-row>
-		<el-row class="case_content6">
+		<el-row class="case_content case_content6">
 			<img src="../../assets/images/img_mh_b1.jpg" alt="">
 		</el-row>
-		<el-row class="case_content7">
+		<el-row class="case_content case_content7">
 			<el-col :span="12" :xs="24" class="case_left">
 				<img src="../../assets/images/img_mh_bp_01.jpg" alt="">
 			</el-col>
@@ -125,7 +125,7 @@
 			</el-col>
 			<i class="line"></i>
 		</el-row>
-		<el-row class="case_content8">
+		<el-row class="case_content case_content8">
 			<p class="mh_logo">
 				<img src="../../assets/images/img_mh_01.png" alt="">
 				<span>产品包装</span>
@@ -143,16 +143,29 @@
 							
 			}
 		},
-		components: {
-			
-		},
 		mounted: function(){ 
-
+			const self = this;
+			self.$nextTick(()=>{
+				const dom_h = $(document).height();
+				$('.case_content').each(function(){
+					const _this = $(this);
+					if(_this.offset().top < dom_h*4/5){
+						_this.addClass('animated');
+					}
+				});
+				$('#app-wrapper').scroll(function(){
+					$('.case_content').each(function(){
+						const _this = $(this);
+						if(_this.offset().top < dom_h*3/4){
+							_this.addClass('animated');
+						}
+					});
+				});
+			});
 		},
 		methods: {
 			
-		}
-			
+		}	
 	}
 </script>
 <style lang='less'>
@@ -161,6 +174,9 @@
 			position: relative;
 			.case_left,.case_right{
 				padding: 4% 0 2%;
+			}
+			&.animated{
+				// animation:fadeIn 0.5s;
 			}
 		}
 		div.case_content7{
@@ -214,6 +230,27 @@
 				}
 			}
 		}
+		&.animated{
+			.case_left{
+				p{
+					animation:fadeInDown 1s;
+				}
+				img{
+					animation:zoomIn 1s;
+				}
+				h3,.subtext{
+					animation:fadeInUp 1s;
+				}
+			}
+			.case_right{
+				.mh_logo{
+					animation:bounceInRight 1s;
+				}
+				.con{
+					animation:fadeInUp 1s;
+				}
+			}
+		}
 	}
 	.case_content2{
 		color: #7f6000;
@@ -251,6 +288,13 @@
 				margin:0 auto;
 			}
 		}
+		&.animated{
+			.case_left{
+				.mh_logo{
+					animation:fadeIn 1s;
+				}
+			}
+		}
 	}
 	.case_content3{
 		.line{
@@ -265,6 +309,7 @@
 			img{
 				width:50%;
 				margin:0 auto -4%;
+				opacity: 0;
 			}
 		}
 		.radius_box{
@@ -274,6 +319,7 @@
 			padding: 1%;
 			border-radius: 10px;
 			background:#ffff00;
+			// opacity: 0;
 			.sqr{
 				position: absolute;
 				bottom:-6px;
@@ -288,6 +334,22 @@
 				position: relative;
 				z-index: 10;
 			}
+		}
+		&.animated{
+			.case_left{
+				.mh_logo{
+					animation:fadeIn 1s;
+				}
+			}
+			.case_right{
+				img{
+					animation:fadeInUp 1s forwards;
+				}
+			}
+			.radius_box{
+				animation:zoomIn 1s 0.8s backwards;
+			}
+
 		}
 	}
 	.case_content4{
@@ -324,6 +386,41 @@
 				font-size:30px;
 				color: #e3cf90;
 			}
+		}
+		&.animated{
+			.case_left{
+				img{
+					animation:fadeInLeft 1s;
+					&.img_txt{
+						animation:fadeInRight 1s;
+					}
+				}
+				.con{
+					animation:fadeInUp 1s;
+				}
+			}
+			.case_right{
+				.img_box{
+					img{
+						&:nth-child(1){
+							animation:rotateInY 1s;
+						}
+						&:nth-child(2){
+							animation:rotateInY 1s 0.5s;
+						}
+						&:nth-child(3){
+							animation:rotateInY 1s 1s;
+						}
+						&:nth-child(4){
+							animation:rotateInY 1s 1.5s;
+						}
+					}
+				}
+				p{
+					animation:fadeInUp 1s;
+				}
+			}
+
 		}
 	}
 	.case_content5{
@@ -375,6 +472,32 @@
 			top:5%;
 			left: 2.5%;
 		}
+		&.animated{
+			.mh_logo{
+				animation:fadeInLeft 1s;
+			}
+			.case_left{
+				.con{
+					img{
+						animation:zoomIn 1s;
+					}
+					p{
+						animation:fadeInUp 1s;
+					}
+				}
+			}
+			.case_right{
+				.txt_box{
+					animation:fadeInUp 1s;
+				}
+				h3{
+					animation:bounceIn 1s;
+				}
+				img{
+					animation:zoomIn 1s;
+				}
+			}
+		}
 	}
 	.case_content6{
 		img{
@@ -385,9 +508,22 @@
 		background:#111111;
 		img{
 			width: 100%;
+			opacity: 0;
 		}
 		.line{
 			background:#fff;
+		}
+		&.animated{
+			.case_left{
+				img{
+					animation:fadeInRight 1s forwards;
+				}
+			}
+			.case_right{
+				img{
+					animation:fadeInLeft 1s forwards;
+				}
+			}
 		}
 	}
 	.case_content8{
@@ -397,12 +533,23 @@
 			img{
 				width: 50%;
 				margin:0 auto;
+				opacity: 0;
 			}
 		}
 		.mh_logo{
 			position: absolute;
 			top:5%;
 			left: 2.5%;
+		}
+		&.animated{
+			.img_box{
+				img{
+					animation:fadeIn 2s forwards;
+				}
+			}
+			.mh_logo{
+				animation:fadeInLeft 1s;
+			}
 		}
 	}
 	.mh_logo{
@@ -461,9 +608,10 @@
 		}
 		.case_content3{
 			.radius_box{
-				top: 45px;
-				right: 4%;
+				top: 50px;
+				right: 5%;
 				padding: 2%;
+				font-size:12px;
 				.sqr{
 					bottom: -4px;
 				    left: 25px;
@@ -553,15 +701,6 @@
 			}
 		}
 	}
-
-	@media screen and (min-width: 1200px){
-		
-	}
-
-	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		
-	}
-
 	@media screen and (max-device-width:768px){
 		.case_wrapper{
 			div[class^="case_content"]{
@@ -605,9 +744,10 @@
 		}
 		.case_content3{
 			.radius_box{
-				top: 45px;
-				right: 4%;
+				top: 50px;
+				right: 5%;
 				padding: 2%;
+				font-size:12px;
 				.sqr{
 					bottom: -4px;
 				    left: 25px;
@@ -692,4 +832,32 @@
 			}
 		}
 	}
+	@media screen and (min-width: 1200px){}
+	@media screen and (min-width: 768px) and (max-width: 1199px) {}
+
+	@-webkit-keyframes rotateInY {
+		0% {
+			-webkit-transform: rotateY(0deg);
+		}
+		100% {
+			-webkit-transform: rotateY(360deg);
+		}
+	}
+	@-moz-keyframes rotateInY {
+		0% {
+			-moz-transform: rotateY(0deg);
+		}
+		100% {
+			-moz-transform: rotateY(360deg);
+		}
+	}
+	@keyframes rotateInY {
+		0% {
+			transform: rotateY(0deg);
+		}
+		100% {
+			transform: rotateY(360deg);
+		}
+	}
+	
 </style>
