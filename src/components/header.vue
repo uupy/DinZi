@@ -7,8 +7,8 @@
 			<el-col class='nav' :span='19' :xs='20'>
 				<el-col :span='3' class='header-title'>
 					<el-row>
-						<img src="../../static/images/sub-title.svg">
-						<!-- <i class="iconfont icon-sub-title"></i> -->
+						<!-- <img src="../../static/images/sub-title.svg"> -->
+						<i class="iconfont icon-sub-title"></i>
 					</el-row>
 				</el-col>
 
