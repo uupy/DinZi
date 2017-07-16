@@ -8,19 +8,19 @@ import 'element-ui/lib/theme-default/index.css'
 import 'optiscroll/dist/optiscroll.css'
 import './assets/css/animate.css'
 import Optiscroll from 'optiscroll'
-import $ from 'jquery'
+import JQuery from 'jquery'
 // import Global from './assets/js/global.js'
 
 Vue.use(Row)
 Vue.use(Col)
 
-window.$ = $;
+window.$ = JQuery;
 Vue.config.productionTip = false;
 //默认进入首页
 router.beforeEach(function(to,from,next){
 	  if (to.path === '/' || to.path === '') {
         next({
-            path: '/index'
+            path: '/case'
         })
     } else {
         next()

@@ -2,7 +2,9 @@
 	<el-row class='pageheader'>
 		<el-col :xs='18' :md='24' class='header-wrap'>
 			<el-col :span='5' class='logo' :xs='4'>
-				<img src="../../static/images/logo.svg">
+				<router-link :to='{path:"/case"}'>
+					<img src="../../static/images/logo.svg">
+				</router-link>
 			</el-col>
 			<el-col class='nav' :span='19' :xs='20'>
 				<el-col :span='3' class='header-title'>
@@ -62,7 +64,7 @@
 	.navigator{height: 100%;line-height: @pageHeight;}
 	.navigator li{float: right;}
 	.navigator li a{color:#fff;padding: 0 35px;height: 100%;display: block;transition:all .3s;}
-	.navigator li a:hover{background: #1B1B1B}
+	.navigator li a:hover{color: #d7a717;}
 	.header-share{height: 100%;background: #1B1B1B}
 	.header-share ul{overflow: hidden;height: 100%;margin-left: 15px;}
 	.header-share ul li{float: left;padding:0 10px;line-height:85px;height: 100%;position: relative;}
@@ -147,7 +149,7 @@
 					{name:'最新动态',path:'/news'},
 					{name:'关于丁子',path:'/company'},
 					{name:'品牌案例',path:'/case'},
-					{name:'首页',path:'/index'},
+					// {name:'首页',path:'/index'},
 				],
 				shareLink:[
 					{icon:'icon-weixin'},

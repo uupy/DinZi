@@ -1,863 +1,297 @@
 <template>
-	<section class="case_wrapper">
-		<el-row class="case_content case_content1">
-			<el-col :span="12" :xs="0" class="case_left">
-				<p>致力成为海南省 农业丨文化丨旅游 地域IP品牌</p>
-				<img src="../../assets/images/img_mh_01.png" alt="">
-				<h3>海南省 慢生活 不猴急</h3>
-				<p class="subtext">海南慢猴网络科技有限公司</p>
+	<el-row>
+		<el-col :sm='24'>
+			<el-col>
+				<v-banner :bannerDatas="banners"></v-banner>
 			</el-col>
-			<el-col :span="12" :xs="24" class="case_right">
-				<p class="mh_logo">
-					<img src="../../assets/images/img_mh_01.png" alt="">
-					<span>机会与痛点</span>
-				</p>
-				<p class="con">海南，生态的<b>绿洲</b>，文化的沙漠</p>
-			</el-col>
-			<i class="line"></i>
-		</el-row>
-		<el-row class="case_content case_content2">
-			<el-col :span="12" :xs="24" class="case_left">
-				<p class="mh_logo">
-					<img src="../../assets/images/img_mh_01.png" alt="">
-					<span>参考案例</span>
-				</p>
-			</el-col>
-			<el-col :span="12" :xs="24" class="case_right">
-				<el-col :lg="9" :md="24" :sm="24" :xs="24">
-					<h3>市场参考</h3>
-					<p class="subtitle">日本贫困县熊本县</p>
-					<p class="subtitle">地方IP项目</p>
-					<div class="con">
-						<p>名称：熊本熊（Kumamon）</p>
-						<p>性别：男</p>
-						<p>生日：2010年3月12日</p>
-						<p>家乡：日本熊本县</p>
-						<p>职业：公务员（县政府营业部、幸福部部长）</p>
-						<p>熟悉他的朋友大概已经知道，熊本熊并非意外走红，其实是靠成功的营销。</p>
-						<p>起初，熊本只是熊本县政府为了配合新干线开通宣传，而设计出的吉祥物。当他正式诞生后，这个没什么特点、以农业为特点的熊本县还是启动的相应的营销计划。</p>
-					</div>
+			<el-col class="home_content">
+				<el-col class='case-list'>
+					<el-col>
+						<el-col class='case-wrap'>
+							<el-col :key='index' v-for='(item,index) in caseList' @click.native='goCase(item)'>
+								<img :src='item.img' />
+								<span class="case-cover">
+								</span>
+								<p class="cover-title">{{item.name}}</p>							
+							</el-col>
+
+							<!-- <el-col v-else @click='moreCase'>
+								<p class="more-span">
+									<span></span>
+									<span></span>
+									<span></span>
+								</p>
+							</el-col> -->
+						</el-col>
+					</el-col>	
+					<el-col class='more'>					
+						<!-- <span class='more-btn' @click='moreCase'>MORE</span> -->
+					</el-col>
 				</el-col>
-				<el-col :lg="15" :md="24" :sm="24" :xs="24">
-					<img src="../../assets/images/img_mh_new.jpg" alt="">
-				</el-col>
+
+				<el-col class='about'>
+					<h3 class='about-title'>丁子品牌设计 ——您的优质品牌形象设计合作伙伴</h3>
+					<el-col :span="22" :offset='1'>
+						<el-col :span="10" class='about-img'>
+							<img src='../../../static/images/img_company_01.jpg' />
+							<span class="shade"></span>
+						</el-col>
+						<el-col :span="14" class='about-img'>
+							<div class='about-txt'>
+								<div class='para p1'>
+									<h3>服务宗旨</h3>
+									<p>用我的专业技术，让您的品牌价值再提升一步，</p>
+									<p>这是我的立业之本。</p>
+								</div>
+								<div class="para p2">
+									<h3>核心价值观</h3>
+									<p><span>专业高效</span><span>优质出品</span><span>至诚至信</span></p>
+								</div>
+								<div class="para p3">
+									<p>专注中小企业品牌设计服务</p>
+								</div>
+							</div>
+							<img src='../../../static/images/img_company_02.jpg' />
+							<span class="shade"></span>
+						</el-col>
+					</el-col>
+					<el-col :span="22" :offset='1' class='team'>
+						<img src='../../../static/images/banner_inner_01.jpg' />
+						<span class="shade"></span>
+						<div class="team-text">
+							<p class="team-title">专业的品牌营销思维及设计团队</p>
+							<p class="team-desc">快速反应 \ 高效无缝对接客户</p>
+						</div>
+					</el-col>
+					<el-col class='more'>					
+						<span class='more-btn' @click='joinDinz'>Join DiNZ</span>
+					</el-col>
+				</el-col>	
+
+				<el-col class='news'>
+					<el-col :span='22' :offset='1'>
+						<el-col :span='8' class='news-wrap'>
+							<ul>
+								<li v-for='item in newsList1'>
+									{{item.title}}
+								</li>
+							</ul>
+						</el-col>
+						<el-col :span='8' class='news-wrap'>
+							<ul>
+								<li v-for='item in newsList2'>
+									{{item.title}}
+								</li>
+							</ul>
+						</el-col>
+						<el-col :span='8' class='news-wrap'>
+							<ul>
+								<li v-for='item in newsList3'>
+									{{item.title}}
+								</li>
+							</ul>
+						</el-col>
+					</el-col>
+				</el-col>			
 			</el-col>
-			<i class="line"></i>
-		</el-row>
-		<el-row class="case_content case_content3">
-			<el-col :span="12" :xs="24" class="case_left">
-				<p class="mh_logo">
-					<img src="../../assets/images/img_mh_01.png" alt="">
-					<span>慢猴介绍</span>
-				</p>
-			</el-col>
-			<el-col :span="12" :xs="24" class="case_right">
-				<img src="../../assets/images/img_mh_02.png" alt="">
-				<div class="radius_box">
-					<p>你好，我来自海南</p>
-					<p>慢是我的生活态度</p>
-					<span class="sqr"></span>
-				</div>
-			</el-col>
-			<i class="line"></i>
-		</el-row>
-		<el-row class="case_content case_content4">
-			<el-col :span="12" :xs="24" class="case_left">
-				<el-col :span="12">
-					<img src="../../assets/images/img_mh_03.png" alt="">
-				</el-col>
-				<el-col :span="12">
-					<img class="img_txt" src="../../assets/images/img_mh_04.png" alt="">
-					<div class="con">
-						<p>在海南岛隐藏着一处神秘慢空间，</p>
-						<p>这里的一天有48小时，</p>
-						<p>而慢猴生活在这里···</p>
-					</div>
-				</el-col>
-			</el-col>
-			<el-col :span="12" :xs="24" class="case_right">
-				<div class="img_box">
-					<img src="../../assets/images/img_mh_05_1.png" alt="">
-					<img src="../../assets/images/img_mh_05_2.png" alt="">
-					<img src="../../assets/images/img_mh_05_3.png" alt="">
-					<img src="../../assets/images/img_mh_05_4.png" alt="">
-				</div>
-				<p>慢猴三视图</p>
-			</el-col>
-			<i class="line"></i>
-		</el-row>
-		<el-row class="case_content case_content5">
-			<el-col :span="12" :xs="24" class="case_left">
-				<p class="mh_logo">
-					<img src="../../assets/images/img_mh_01.png" alt="">
-					<span>慢猴定位</span>
-				</p>
-				<div class="con">
-					<img src="../../assets/images/img_mh_06.jpg" alt="">
-					<p>从海南走出的潮牌IP</p>
-				</div>
-			</el-col>
-			<el-col :span="12" :xs="24" class="case_right">
-				<h3>百亿规模生态化产业 引领全国的“海南新文化”潮牌</h3>
-				<img src="../../assets/images/img_mh_map.png" alt="">
-				<div class="txt_box">
-					<h3>吃喝玩乐</h3>
-					<h3>衣食住行</h3>
-					<p>慢猴海南食品</p>
-					<p>慢猴咖啡馆</p>
-					<p>慢猴餐厅</p>
-					<p>慢猴大本营</p>
-					<p>慢猴主题酒店</p>
-					<p>······</p>
-				</div>
-			</el-col>
-			<i class="line"></i>
-		</el-row>
-		<el-row class="case_content case_content6">
-			<img src="../../assets/images/img_mh_b1.jpg" alt="">
-		</el-row>
-		<el-row class="case_content case_content7">
-			<el-col :span="12" :xs="24" class="case_left">
-				<img src="../../assets/images/img_mh_bp_01.jpg" alt="">
-			</el-col>
-			<el-col :span="12" :xs="24" class="case_right">
-				<img src="../../assets/images/img_mh_car.jpg" alt="">
-			</el-col>
-			<i class="line"></i>
-		</el-row>
-		<el-row class="case_content case_content8">
-			<p class="mh_logo">
-				<img src="../../assets/images/img_mh_01.png" alt="">
-				<span>产品包装</span>
-			</p>
-			<div class="img_box">
-				<img src="../../assets/images/img_mh_b2.jpg" alt="">
-			</div>
-		</el-row>
-	</section>
+		</el-col>
+	</el-row>
 </template>
-<script>
-	export default {
-		data(){
-			return {
-							
-			}
-		},
-		mounted: function(){ 
-			const self = this;
-			self.$nextTick(()=>{
-				const dom_h = $(document).height();
-				$('.case_content').each(function(){
-					const _this = $(this);
-					if(_this.offset().top < dom_h*4/5){
-						_this.addClass('animated');
-					}
-				});
-				$('#app-wrapper').scroll(function(){
-					$('.case_content').each(function(){
-						const _this = $(this);
-						if(_this.offset().top < dom_h*3/4){
-							_this.addClass('animated');
-						}
-					});
-				});
-			});
-		},
-		methods: {
-			
-		}	
-	}
-</script>
-<style lang='less'>
-	.case_wrapper{
-		div[class^="case_content"]{
-			position: relative;
-			.case_left,.case_right{
-				padding: 4% 0 2%;
-			}
-			&.animated{
-				// animation:fadeIn 0.5s;
-			}
-		}
-		div.case_content7{
-			.case_left,.case_right{
-				padding: 0;
-			}
-		}
-		text-align: center;
-		.line{
-			width: 4px;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left:50%;
-			margin-left: -2px;
-		}
-	}
-	.case_content1,.case_content3{
-		color: #bd8701;
-		background:#feee00;
-	}
-	.case_content1{
-		.line{
-			background:#fff;
-		}
-		.case_left{
-			img{
-				width: 70%;
-				margin: 60px auto 20px;
-			}
-			h3{
-				font-size: 28px;
-				font-weight: normal;
-			}
-			.subtext{
-				padding-top: 30px;
-				font-size:12px;
-			}
-		}
-		.case_right{
-			.mh_logo{
-				padding-left: 40px;
-				text-align:left;
-			}
-			.con{
-				padding-top: 13%;
-				font-size: 32px;
-				b{
-					color: #92d050;
-					font-weight: normal;
-				}
-			}
-		}
-		&.animated{
-			.case_left{
-				p{
-					animation:fadeInDown 1s;
-				}
-				img{
-					animation:zoomIn 1s;
-				}
-				h3,.subtext{
-					animation:fadeInUp 1s;
-				}
-			}
-			.case_right{
-				.mh_logo{
-					animation:bounceInRight 1s;
-				}
-				.con{
-					animation:fadeInUp 1s;
-				}
-			}
-		}
-	}
-	.case_content2{
-		color: #7f6000;
-		.line{
-			background:#feee00;
-		}
-		.case_left{
-			.mh_logo{
-				padding-top:15%;
-			}
-		}
-		.case_right{
-			text-align:left;
-			.el-col{
-				padding:0 20px;
-			}
-			.con{
-				margin-top:20px;
-			}
-			h3{
-				padding:0 0 4px 20px;
-				font-size:30px;
-				font-weight:normal;
-			}
-			p{
-				padding:0 0 0 20px;
-				font-size: 14px;
-				&.subtitle{
-					padding:4px 0 4px 20px;
-					font-size: 20px;
-				}
-			}
-			img{
-				width: 95%;
-				margin:0 auto;
-			}
-		}
-		&.animated{
-			.case_left{
-				.mh_logo{
-					animation:fadeIn 1s;
-				}
-			}
-		}
-	}
-	.case_content3{
-		.line{
-			background:#fff;
-		}
-		.case_left{
-			.mh_logo{
-				padding-top:15%;
-			}
-		}
-		.case_right{
-			img{
-				width:50%;
-				margin:0 auto -4%;
-				opacity: 0;
-			}
-		}
-		.radius_box{
-			position: absolute;
-			top: 40px;
-			right: 5%;
-			padding: 1%;
-			border-radius: 10px;
-			background:#ffff00;
-			// opacity: 0;
-			.sqr{
-				position: absolute;
-				bottom:-6px;
-				left: 25px;
-				width: 50px;
-				height: 15px;
-				background:#ffff00;
-				transform:rotate(-16deg);
-				z-index: 0;
-			}
-			p{
-				position: relative;
-				z-index: 10;
-			}
-		}
-		&.animated{
-			.case_left{
-				.mh_logo{
-					animation:fadeIn 1s;
-				}
-			}
-			.case_right{
-				img{
-					animation:fadeInUp 1s forwards;
-				}
-			}
-			.radius_box{
-				animation:zoomIn 1s 0.8s backwards;
-			}
+<style scoped lang="less">
+	.about_us,.stock,.case_list{cursor: pointer;}
+	.item-row{background: #fff;margin-top:60px;position: relative;}
+	.case-wrap>div{position: relative;}
 
-		}
-	}
-	.case_content4{
-		background:#fffeee;
-		.line{
-			background:#feee00;
-		}
-		.case_left{
-			img{
-				width: 100%;
-				&.img_txt{
-					width: 70%;
-					margin:14% 0 0 8%;
-				}
-			}
-			.con{
-				padding: 30% 10%;
-				line-height: 28px;
-				color: #936E42;
-				text-align:left;
-			}
-		}
-		.case_right{
-			.img_box{
-				padding:10% 5%;
-				font-size:0;
-				img{
-					display: inline-block;
-					width:23%;
-					margin:0 1%;
-				}
-			}
-			p{
-				font-size:30px;
-				color: #e3cf90;
-			}
-		}
-		&.animated{
-			.case_left{
-				img{
-					animation:fadeInLeft 1s;
-					&.img_txt{
-						animation:fadeInRight 1s;
-					}
-				}
-				.con{
-					animation:fadeInUp 1s;
-				}
-			}
-			.case_right{
-				.img_box{
-					img{
-						&:nth-child(1){
-							animation:rotateInY 1s;
-						}
-						&:nth-child(2){
-							animation:rotateInY 1s 0.5s;
-						}
-						&:nth-child(3){
-							animation:rotateInY 1s 1s;
-						}
-						&:nth-child(4){
-							animation:rotateInY 1s 1.5s;
-						}
-					}
-				}
-				p{
-					animation:fadeInUp 1s;
-				}
-			}
+	.case-cover{position: absolute;opacity: 0;left: 0;top: 0;height: 100%;width: 100%;background: #000;z-index: 999;transition: all .4s;-webkit-transition: all .4s;-moz-transition: all .4s;-ms-transition: all .4s;cursor: pointer}
 
+	.case-wrap>div{width: 20%;overflow: hidden;}
+	.case-wrap>div img{position:relative;z-index:99;width: 100%;cursor: pointer;transition: all .4s;-webkit-transition: all .4s;-moz-transition: all .4s;-ms-transition: all .4s;}
+	.case-wrap>div img:hover{transform: scale(1.2);-webkit-transform: scale(1.2);-moz-transform: scale(1.2);-ms-transform: scale(1.2);}
+
+	.cover-title{width:100%;cursor: pointer;position: absolute;left:50%;top: 50%;z-index: 99999;opacity: 0;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;color:#fff;text-align: center;transform:translateY(-50%) translateX(-50%);-webkit-transform:translateY(-50%) translateX(-50%);-moz-transform:translateY(-50%) translateX(-50%);-ms-transform:translateY(-50%) translateX(-50%);font-size: 24px;}
+
+	.more-btn{border:1px solid #999;color:#666;padding:12px 30px;cursor: pointer;}
+	.more-btn:hover{background: #ED811C;border:1px solid #ED811C;color:#fff;transition: all .4s;-webkit-transition: all .4s;-moz-transition: all .4s;-ms-transition: all .4s;}
+	.more{clear:both;margin:50px auto;text-align: center}
+	.case-wrap{
+		.el-col{
+			&:hover .case-cover{
+				opacity: .6;
+			}
+			&:hover img{
+				-webkit-transform:scale(1.2);transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);
+			}
+			&:hover .cover-title{opacity: 1;}
 		}
 	}
-	.case_content5{
-		background:#bdda26;
-		color: #8B7807;
-		.line{
-			background:#fff;
-		}
-		.case_left{
-			.con{
-				padding:10% 0;
-				img{
-					width: 60%;
-					margin:0 auto;
-				}
-				p{
-					padding:5% 0 0;
-					font-size:22px;
-				}
-			}
-		}
-		.case_right{
-			position: relative;
-			text-align:left;
-			.txt_box{
-				position: absolute;
-				right:10%;
-				bottom:8%;
-				h3{
-					padding:0 0 10px 0;
-					font-size:28px;
-				}
-				p{
-					padding: 1px 0;
-				}
-			}
-			h3{
-				padding-left:15%;
-				font-size:22px;
-				font-weight:normal;
-			}
-			img{
-				width: 55%;
-				margin-left:15%;
-			}
-		}
-		.mh_logo{
-			position: absolute;
-			top:5%;
-			left: 2.5%;
-		}
-		&.animated{
-			.mh_logo{
-				animation:fadeInLeft 1s;
-			}
-			.case_left{
-				.con{
-					img{
-						animation:zoomIn 1s;
-					}
-					p{
-						animation:fadeInUp 1s;
-					}
-				}
-			}
-			.case_right{
-				.txt_box{
-					animation:fadeInUp 1s;
-				}
-				h3{
-					animation:bounceIn 1s;
-				}
-				img{
-					animation:zoomIn 1s;
-				}
-			}
-		}
-	}
-	.case_content6{
-		img{
-			width: 100%;
-		}
-	}
-	.case_content7{
-		background:#111111;
-		img{
-			width: 100%;
-			opacity: 0;
-		}
-		.line{
-			background:#fff;
-		}
-		&.animated{
-			.case_left{
-				img{
-					animation:fadeInRight 1s forwards;
-				}
-			}
-			.case_right{
-				img{
-					animation:fadeInLeft 1s forwards;
-				}
-			}
-		}
-	}
-	.case_content8{
-		background:#FBFFFF;
-		.img_box{
-			padding:8% 0 4%;
-			img{
-				width: 50%;
-				margin:0 auto;
-				opacity: 0;
-			}
-		}
-		.mh_logo{
-			position: absolute;
-			top:5%;
-			left: 2.5%;
-		}
-		&.animated{
-			.img_box{
-				img{
-					animation:fadeIn 2s forwards;
-				}
-			}
-			.mh_logo{
-				animation:fadeInLeft 1s;
-			}
-		}
-	}
-	.mh_logo{
-		img{
-			display: inline-block;
-			width: 150px;
-			vertical-align: middle;
-		}
-		span{
-			display: inline-block;
-			padding-left:10px;
-			vertical-align: middle;
-			font-size: 28px;
-		}
-	}
-	@media screen and (max-width: 768px) {
-		.case_wrapper{
-			div[class^="case_content"]{
-				.case_left,.case_right{
-					padding: 5% 0;
-				}
-			}
-		}
-		.line{
-			display: none;
-		}
-		.case_content1{
-			.case_left{
-				display: none;
-			}
-			.case_right{
-				.mh_logo{
-					padding-left: 0;
-					text-align:center;
-				}
-				.con{
-					padding:4% 0 2%;
-					font-size: 16px;
-				}
-			}
-		}
-		.case_content2{
-			.case_right{
-				h3{
-					font-size: 20px;
-				}
-				p{
-					&.subtitle{
-						font-size:15px;
-					}
-				}
-				.con{
-					margin:5px 0;
-				}
-			}
-		}
-		.case_content3{
-			.radius_box{
-				top: 50px;
-				right: 5%;
-				padding: 2%;
-				font-size:12px;
-				.sqr{
-					bottom: -4px;
-				    left: 25px;
-				    width: 30px;
-				    height: 10px;
-				}
-			}
-			.case_right{
-				img{
-					margin:0 auto -5%;
-				}
-			}
-		}
-		.case_content4{
-			.case_left{
-				.con{
-					padding: 4% 0;
-					font-size:12px;
-				}
-			}
-			.case_right{
-				.img_box{
-					padding:0% 5% 5%;
-				}
-				p{
-					font-size:20px;
-				}
-			}
-		}
-		.case_content5{
-			.case_left{
-				.con{
-					padding-bottom: 0;
-					p{
-						font-size:16px;
-					}
-				}
-			}
-			.case_right{
-				h3{
-					padding:0;
-					font-size:14px;
-					text-align:center;
-				}
-				img{
-					margin-left:6%;
-				}
-				.txt_box{
-					bottom: 3%;
-					h3{
-						padding-bottom:2px;
-						font-size:16px;
-						text-align:left;
-					}
-					p{
-						font-size:12px;
-					}
-				}
-			}
-			.mh_logo{
-				left: 50%;
-				transform:translateX(-50%);
-			}
-		} 
-		.case_content7{
-			.case_left,.case_right{
-				padding: 0 !important;
-			}
-		}
-		.case_content8{
-			.mh_logo{
-				left: 50%;
-				transform:translateX(-50%);
-			}
-			.img_box{
-				padding: 12% 0 4%;
-			}
-		}
-		.mh_logo{
-			padding-top:0 !important;
-			img{
-				width: 80px;
-			}
-			span{
-				padding-left:4px;
-				font-size: 18px;
-			}
-		}
-	}
+
+	// .case-wrap>div:last-child{background:#d2d2d2;cursor: pointer}
+	// .case-wrap>div:last-child img,.case-wrap>div:last-child .case-cover{display: none !important}
+	// .case-wrap>div:last-child:after{content:'';display: block;margin-top:81%;}
+	// .case-wrap>div:last-child span{display: inline-block;width: 12px;height: 10px;border-radius: 6px;background:#fff;}
+	.more-span {position: absolute;left:50%;top:50%;transform:translateY(-50%) translateX(-50%);-webkit-transform:translateY(-50%) translateX(-50%);-moz-transform:translateY(-50%) translateX(-50%);-ms-transform:translateY(-50%) translateX(-50%);}
+
+	.case-title{text-align: center;margin:15px;}
+	.more-case{float: left;}
+
+
+	.shade{position: absolute;top:0;bottom:0;left: 0;width: 100%;background:rgba(0,0,0,.5);transition:0.4s;}
+	.about{margin-top:30px;}
+	.about-title{color:#151515;text-align: center;margin-bottom: 30px;font-size: 24px;padding:0 15px;}
+	.about-img{box-sizing: border-box;padding-left:5px;overflow: hidden;position: relative;}
+	.about-img:first-child{padding-left: 0;}
+	.about-img img {width:100%;height: 420px;}
+	// .team{margin-top: 5px;box-sizing: border-box;overflow: hidden;text-align: center;background: #535353;color:#fff;padding: 12rem 0;}
+	.team{position: relative; margin-top: 5px;overflow: hidden;text-align: center;color:#fff;}
+	.team img{width:100%;}
+	.team-text{position: absolute;top: 50%;left:0;transform:translateY(-50%); width: 100%;z-index:100;}
+	.team-title{font-size: 36px;line-height: 2;}
+	.team-desc{color:#FDD900}
+
+	.about-txt{position: absolute;left:20px;top:20px;z-index: 999;color:#fff;}
+	.about-txt h3{font-weight: normal;padding: 15px 0;transform:translateX(-100%);-webkit-transform:translateX(-100%);-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);transition:all .5s 0s;-webkit-transition:all .5s 0s;}
+
+	.about-txt .para p{transform:translateX(-110%);-webkit-transform:translateX(-110%);-moz-transform:translateX(-110%);-ms-transform:translateX(-110%);transition:all .5s 0s;-webkit-transition:all .5s 0s;}
+
+	.about-txt .para{margin-bottom: 50px;}
+
+	.about-txt .para:last-child{margin:120px 0 0 0;}
+	.about-txt p{font-size: 14px;line-height: 2;}
+
+	.about-txt .para h3{transition:all .3s;-webkit-transition:all .3s;}
+	.about-txt .para p {transition:all .3s;-webkit-transition:all .3s;}
+	// .about-txt .para:nth-child(2) p {transition:all .3s;-webkit-transition:all .3s;}
+	// .about-txt .para:nth-child(3) p {transition:all .3s;-webkit-transition:all .3s;}
+	// .about-txt .para:nth-child(2) h3{transition:all .3s;-webkit-transition:all .3s;}
+
+
+	.about-img:hover .shade{opacity: 0;}
+	.about-img:hover .about-txt h3{transform:translateX(0);-webkit-transform:translateX(0);}
+	.about-img:hover .about-txt .p1 p{transform:translateX(0);-webkit-transform:translateX(0);}
+	.about-img:hover .about-txt .p2 p{transform:translateX(0);-webkit-transform:translateX(0);}
+	.about-img:hover .about-txt .p3 p{transform:translateX(0);-webkit-transform:translateX(0);}
+
+
+	.news-wrap{font-size: 14px;color:#999;box-sizing: border-box;padding-left: 10%;}
+	.news-wrap ul li:first-child{font-size: 16px;margin:15px 0;overflow: visible;margin-bottom: 20px;}
+	.news-wrap:first-child{padding-left: 0;}
+	.news{margin-top: 30px;margin-bottom: 60px;}
+	.news-wrap ul li{cursor: pointer;position: relative;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;line-height: 1.5;}
+	.news-wrap ul li:hover{color:#333;}
+
+	.news-wrap ul li:first-child:after{content:'';display: block;width:32px;height: 1px;background: #999;position: absolute;left:0;bottom: -10px;}
+
+	.news-wrap ul{position: relative}
+	.news-wrap ul:after{content:'';content:'';display: block;width:16px;height: 1px;background: #999;position: absolute;left:0;bottom: -12px;}
+
+
 	@media screen and (max-device-width:768px){
-		.case_wrapper{
-			div[class^="case_content"]{
-				.case_left,.case_right{
-					padding: 5% 0;
-				}
-			}
-		}
-		.line{
-			display: none;
-		}
-		.case_content1{
-			.case_left{
-				display: none;
-			}
-			.case_right{
-				.mh_logo{
-					padding-left: 0;
-					text-align:center;
-				}
-				.con{
-					padding:4% 0 2%;
-					font-size: 16px;
-				}
-			}
-		}
-		.case_content2{
-			.case_right{
-				h3{
-					font-size: 20px;
-				}
-				p{
-					&.subtitle{
-						font-size:15px;
-					}
-				}
-				.con{
-					margin:5px 0;
-				}
-			}
-		}
-		.case_content3{
-			.radius_box{
-				top: 50px;
-				right: 5%;
-				padding: 2%;
-				font-size:12px;
-				.sqr{
-					bottom: -4px;
-				    left: 25px;
-				    width: 30px;
-				    height: 10px;
-				}
-			}
-		}
-		.case_content4{
-			.case_left{
-				.con{
-					padding: 4% 0;
-					font-size:12px;
-				}
-			}
-			.case_right{
-				.img_box{
-					padding:0% 5% 5%;
-				}
-				p{
-					font-size:20px;
-				}
-			}
-		}
-		.case_content5{
-			.case_left{
-				.con{
-					padding-bottom: 0;
-					p{
-						font-size:16px;
-					}
-				}
-			}
-			.case_right{
-				h3{
-					padding:0;
-					font-size:14px;
-					text-align:center;
-				}
-				img{
-					margin-left:6%;
-				}
-				.txt_box{
-					bottom: 3%;
-					h3{
-						padding-bottom:2px;
-						font-size:16px;
-						text-align:left;
-					}
-					p{
-						font-size:12px;
-					}
-				}
-			}
-			.mh_logo{
-				left: 50%;
-				transform:translateX(-50%);
-			}
-		} 
-		.case_content7{
-			.case_left,.case_right{
-				padding: 0 !important;
-			}
-		}
-		.case_content8{
-			.mh_logo{
-				left: 50%;
-				transform:translateX(-50%);
-			}
-			.img_box{
-				padding: 12% 0 4%;
-			}
-		}
-		.mh_logo{
-			padding-top:0 !important;
-			img{
-				width: 80px;
-			}
-			span{
-				padding-left:4px;
-				font-size: 18px;
-			}
-		}
+		.case-wrap>div{width: 50%}
+		.case-wrap>div:last-child{display: none;}
+		.about-img{width:100%;margin-top:5px;padding-left: 0;height: 160px;}
+		.about-img img{height:auto;}
+		.team{padding: 2.5rem 0;}
+		.team-title{font-size: 22px;}
+		.news{display: none;}
 	}
-	@media screen and (min-width: 1200px){}
-	@media screen and (min-width: 768px) and (max-width: 1199px) {}
-
-	@-webkit-keyframes rotateInY {
-		0% {
-			-webkit-transform: rotateY(0deg);
-		}
-		100% {
-			-webkit-transform: rotateY(360deg);
-		}
+	@media screen and (max-width:768px){
+		.case-wrap>div{width: 50%}
+		.case-wrap>div:last-child{display: none;}
+		.about-img{width:100%;margin-top:5px;padding-left: 0;height: 160px;}
+		.about-img img{height:auto;}
+		.team{padding: 2.5rem 0;box-sizing: border-box;height: 160px;}
+		.team-title{font-size: 22px;}
+		.news{display: none;}
 	}
-	@-moz-keyframes rotateInY {
-		0% {
-			-moz-transform: rotateY(0deg);
-		}
-		100% {
-			-moz-transform: rotateY(360deg);
-		}
-	}
-	@keyframes rotateInY {
-		0% {
-			transform: rotateY(0deg);
-		}
-		100% {
-			transform: rotateY(360deg);
-		}
-	}
-	
 </style>
+
+<script>
+	import vBanner from '@/components/banner.vue'
+	import Banner1 from '../../../static/images/banner_home_01.jpg'
+	import Banner2 from '../../../static/images/banner_home_02.jpg'
+	import Banner3 from '../../../static/images/banner_home_03.jpg'
+
+	import Case1 from '../../../static/images/img_case_01.jpg'
+	import Case2 from '../../../static/images/img_case_02.jpg'
+	import Case3 from '../../../static/images/img_case_03.jpg'
+	import Case4 from '../../../static/images/img_case_04.jpg'
+	import Case5 from '../../../static/images/img_case_05.jpg'
+	import Case6 from '../../../static/images/img_case_06.jpg'
+	import Case7 from '../../../static/images/img_case_07.jpg'
+	import Case8 from '../../../static/images/img_case_08.jpg'
+	import Case9 from '../../../static/images/img_case_09.jpg'
+	import Case10 from '../../../static/images/img_case_10.jpg'
+	import Case11 from '../../../static/images/img_case_11.jpg'
+	import Case12 from '../../../static/images/img_case_12.jpg'
+	import Case13 from '../../../static/images/img_case_13.jpg'
+	import Case14 from '../../../static/images/img_case_14.jpg'
+
+
+
+	export default{
+		data(){
+			return{
+				banners:[
+            		{src:Banner1,link:'',alt:'',index:1},
+            		{src:Banner2,link:'',alt:'',index:2},
+            		{src:Banner3,link:'',alt:'',index:3},
+            	],
+            	caseList:[
+            		{img:Case1,link:'',name:'本姓酒'},
+            		{img:Case2,link:'',name:'Fortes'},
+            		{img:Case3,link:'',name:'爱丽舍'},
+            		{img:Case4,link:'',name:'汉凯'},
+            		{img:Case5,link:'',name:'Smile Cakes'},
+            		{img:Case6,link:'/case/mh',name:'慢猴'},
+            		{img:Case7,link:'',name:'草橙酒业'},
+            		{img:Case8,link:'',name:'Inhuo'},
+            		{img:Case9,link:'',name:'优央'},
+            		{img:Case10,link:'',name:'尚里'},
+            		{img:Case11,link:'',name:'本姓酒'},
+            		{img:Case12,link:'',name:'Epire'},
+            		{img:Case13,link:'',name:'紫罗兰'},
+            		{img:Case14,link:'',name:'灵丹瑜伽'},
+            		// {img:'',link:'',name:'更多案例>>'},
+            	],
+            	newsList1:[
+            		{title:'丁子动态 >',link:''},
+            		{title:'LOGO设计公司价格差距是哪些因素造成的',link:''},
+            		{title:'LOGO设计公司怎样提炼设计内容',link:''},
+            		{title:'LOGO设计公司应遵循哪三大原则',link:''},
+            		{title:'影响LOGO设计公司创意设计因素有哪些',link:''},
+            	],
+            	newsList2:[
+            		{title:'丁子观点 >',link:''},
+            		{title:'将品牌形象钉在消费者心智里',link:''},
+            		{title:'品牌快速赢得消费者信任的29种方法',link:''},
+            		{title:'十分钟看懂 聚焦',link:''},
+            		{title:'丁子徐浅谈“钉视觉”美学',link:''},
+            	],
+            	newsList3:[
+            		{title:'行业咨讯 >',link:''},
+            		{title:'微信时代的产品包装设计需将升级',link:''},
+            		{title:'原研哉公开2020年东京奥运会LOGO',link:''},
+            		{title:'美国时装品牌Calvin Klein更换新LOGO',link:''},
+            		{title:'小米公司松果电子品牌LOGO',link:''},
+            	]
+
+			}
+		},
+		created(){
+		},
+		methods:{	
+			goCase(row){
+				this.$router.push({path:row.link})
+			},
+			moreCase(){
+				this.$router.push({path:'case'})
+			},
+			joinDinz(){
+				this.$router.push({path:'/join-us'})
+			}
+		},
+		components:{ 
+			vBanner
+		}
+	}	
+</script>

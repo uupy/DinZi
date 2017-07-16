@@ -15,17 +15,17 @@
 								<p class="cover-title">{{item.name}}</p>							
 							</el-col>
 
-							<el-col v-else @click='moreCase'>
+							<!-- <el-col v-else @click='moreCase'>
 								<p class="more-span">
 									<span></span>
 									<span></span>
 									<span></span>
 								</p>
-							</el-col>
+							</el-col> -->
 						</el-col>
 					</el-col>	
 					<el-col class='more'>					
-						<span class='more-btn' @click='moreCase'>MORE</span>
+						<!-- <span class='more-btn' @click='moreCase'>MORE</span> -->
 					</el-col>
 				</el-col>
 
@@ -34,6 +34,7 @@
 					<el-col :span="22" :offset='1'>
 						<el-col :span="10" class='about-img'>
 							<img src='../../../static/images/img_company_01.jpg' />
+							<span class="shade"></span>
 						</el-col>
 						<el-col :span="14" class='about-img'>
 							<div class='about-txt'>
@@ -51,11 +52,16 @@
 								</div>
 							</div>
 							<img src='../../../static/images/img_company_02.jpg' />
+							<span class="shade"></span>
 						</el-col>
 					</el-col>
 					<el-col :span="22" :offset='1' class='team'>
-						<p class="team-title">专业的品牌营销思维及设计团队</p>
-						<p class="team-desc">快速反应 \ 高效无缝对接客户</p>
+						<img src='../../../static/images/banner_inner_01.jpg' />
+						<span class="shade"></span>
+						<div class="team-text">
+							<p class="team-title">专业的品牌营销思维及设计团队</p>
+							<p class="team-desc">快速反应 \ 高效无缝对接客户</p>
+						</div>
 					</el-col>
 					<el-col class='more'>					
 						<span class='more-btn' @click='joinDinz'>Join DiNZ</span>
@@ -119,23 +125,26 @@
 		}
 	}
 
-	.case-wrap>div:last-child{background:#d2d2d2;cursor: pointer}
-	.case-wrap>div:last-child img,.case-wrap>div:last-child .case-cover{display: none !important}
-	.case-wrap>div:last-child:after{content:'';display: block;margin-top:81%;}
-	.case-wrap>div:last-child span{display: inline-block;width: 12px;height: 10px;border-radius: 6px;background:#fff;}
+	// .case-wrap>div:last-child{background:#d2d2d2;cursor: pointer}
+	// .case-wrap>div:last-child img,.case-wrap>div:last-child .case-cover{display: none !important}
+	// .case-wrap>div:last-child:after{content:'';display: block;margin-top:81%;}
+	// .case-wrap>div:last-child span{display: inline-block;width: 12px;height: 10px;border-radius: 6px;background:#fff;}
 	.more-span {position: absolute;left:50%;top:50%;transform:translateY(-50%) translateX(-50%);-webkit-transform:translateY(-50%) translateX(-50%);-moz-transform:translateY(-50%) translateX(-50%);-ms-transform:translateY(-50%) translateX(-50%);}
 
 	.case-title{text-align: center;margin:15px;}
 	.more-case{float: left;}
 
 
+	.shade{position: absolute;top:0;bottom:0;left: 0;width: 100%;background:rgba(0,0,0,.5);transition:0.4s;}
 	.about{margin-top:30px;}
 	.about-title{color:#151515;text-align: center;margin-bottom: 30px;font-size: 24px;padding:0 15px;}
-	.about-img{box-sizing: border-box;padding-left:5px;overflow: hidden;position: relative}
+	.about-img{box-sizing: border-box;padding-left:5px;overflow: hidden;position: relative;}
 	.about-img:first-child{padding-left: 0;}
 	.about-img img {width:100%;height: 420px;}
-	.team{margin-top: 5px;box-sizing: border-box;overflow: hidden;text-align: center;background: #535353;color:#fff;padding: 12rem 0;}
-	.team img{padding-left: 5px;width:100%;max-height: 430px;}
+	// .team{margin-top: 5px;box-sizing: border-box;overflow: hidden;text-align: center;background: #535353;color:#fff;padding: 12rem 0;}
+	.team{position: relative; margin-top: 5px;overflow: hidden;text-align: center;color:#fff;}
+	.team img{width:100%;}
+	.team-text{position: absolute;top: 50%;left:0;transform:translateY(-50%); width: 100%;z-index:100;}
 	.team-title{font-size: 36px;line-height: 2;}
 	.team-desc{color:#FDD900}
 
@@ -149,13 +158,14 @@
 	.about-txt .para:last-child{margin:120px 0 0 0;}
 	.about-txt p{font-size: 14px;line-height: 2;}
 
-	.about-txt .para:nth-child(1) h3{transition:all .3s 0s;-webkit-transition:all .3s 0s;}
-	.about-txt .para:nth-child(1) p {transition:all .3s .3s;-webkit-transition:all .3s .4s;}
-	.about-txt .para:nth-child(2) p {transition:all .3s .9s;-webkit-transition:all .3s .9s;}
-	.about-txt .para:nth-child(3) p {transition:all .3s 1.2s;-webkit-transition:all .3s 1.2s;}
-	.about-txt .para:nth-child(2) h3{transition:all .3s .6s;-webkit-transition:all .3s .6s;}
+	.about-txt .para h3{transition:all .3s;-webkit-transition:all .3s;}
+	.about-txt .para p {transition:all .3s;-webkit-transition:all .3s;}
+	// .about-txt .para:nth-child(2) p {transition:all .3s;-webkit-transition:all .3s;}
+	// .about-txt .para:nth-child(3) p {transition:all .3s;-webkit-transition:all .3s;}
+	// .about-txt .para:nth-child(2) h3{transition:all .3s;-webkit-transition:all .3s;}
 
 
+	.about-img:hover .shade{opacity: 0;}
 	.about-img:hover .about-txt h3{transform:translateX(0);-webkit-transform:translateX(0);}
 	.about-img:hover .about-txt .p1 p{transform:translateX(0);-webkit-transform:translateX(0);}
 	.about-img:hover .about-txt .p2 p{transform:translateX(0);-webkit-transform:translateX(0);}
