@@ -53,7 +53,7 @@
 	@pageHeight:110px;
 	.header-title i.iconfont{font-size: 56px;color:#d7a717;}
 
-	.pageheader{height: @pageHeight;background: #1B1B1B;z-index: 9999}
+	.pageheader{background: #1B1B1B;z-index: 9999;border-bottom: 5px solid #d7a717;}
 	.logo{text-align: left;position: relative;height: @pageHeight;}
 
 	.logo img{height:70%;vertical-align: middle;position: absolute;left: 50%;top:46%;-webkit-transform:translateY(-50%) translateX(-50%);}
@@ -92,9 +92,9 @@
 	}
 	@media screen and (max-width: 768px) {
 		.header-wrap{width: 100%}
-		.nav-title{display: none;}
+		.nav-title,.header-title{display: none;}
 		@pageHeight:70px;
-		.pageheader,.logo,.header-title,.nav{height: @pageHeight}
+		.logo,.header-title,.nav{height: @pageHeight}
 		.header-title img{width:100%;}
 		.header-title>div:nth-child(2) img{display: none;}
 		.header-title>div:nth-child(1) img{width: 130%;}
@@ -103,7 +103,7 @@
 		.nav{width: 80%;}
 		.logo{width: 20%}
 		.menu-button i{font-size: 20px;}
-		.pageheader{position: fixed;left: 0;top: 0;width: 100%;z-index: 99999;}
+		.pageheader{position: fixed;left: 0;top: 0;width: 100%;z-index: 99999;border-bottom: 2px solid #d7a717;}
 		.mobile-menu{top:@pageHeight;}
 	}
 
@@ -121,9 +121,9 @@
 
 
 	@media screen and (max-device-width:768px){
-		.nav-title{display: none;}
+		.nav-title,.header-title{display: none;}
 		@pageHeight:50px;
-		.pageheader,.logo,.header-title,.nav{height: @pageHeight}
+		.logo,.header-title,.nav{height: @pageHeight}
 		.header-title img{width:100%;}
 		.header-title>div:nth-child(1) img{width: 200%;}
 		.header-title>div:nth-child(2) img{display: none;}
@@ -131,7 +131,7 @@
 		.menu-button i{font-size: 20px;}
 		.logo{padding-left: 20px}
 		.logo img{width: 85%;}
-		.pageheader{position: fixed;left: 0;top: 0;width: 100%;z-index: 99999}
+		.pageheader{position: fixed;left: 0;top: 0;width: 100%;z-index: 99999;border-bottom: 2px solid #d7a717;}
 		.mobile-menu{top:@pageHeight;}
 		.menu-button{top:0;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
 
