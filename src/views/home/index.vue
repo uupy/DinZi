@@ -98,6 +98,7 @@
 	</el-row>
 </template>
 <style scoped lang="less">
+	.home_content{border-top:5px solid #fff;}
 	.about_us,.stock,.case_list{cursor: pointer;}
 	.item-row{background: #fff;margin-top:60px;position: relative;}
 	.case-wrap>div{position: relative;}

@@ -98,6 +98,7 @@
 	</el-row>
 </template>
 <style scoped lang="less">
+	.home_content{border-top:5px solid #fff;}
 	.about_us,.stock,.case_list{cursor: pointer;}
 	.item-row{background: #fff;margin-top:60px;position: relative;}
 	.case-wrap>div{position: relative;}
@@ -186,6 +187,7 @@
 
 
 	@media screen and (max-device-width:768px){
+		.home_content{border-top:2px solid #fff;}
 		.case-wrap>div{width: 50%}
 		.case-wrap>div:last-child{display: none;}
 		.about-img{width:100%;margin-top:5px;padding-left: 0;height: 160px;}
@@ -195,6 +197,7 @@
 		.news{display: none;}
 	}
 	@media screen and (max-width:768px){
+		.home_content{border-top:2px solid #fff;}
 		.case-wrap>div{width: 50%}
 		.case-wrap>div:last-child{display: none;}
 		.about-img{width:100%;margin-top:5px;padding-left: 0;height: 160px;}
@@ -237,7 +240,7 @@
             		{src:Banner3,link:'',alt:'',index:3},
             	],
             	caseList:[
-            		{img:Case1,link:'',name:'本姓酒'},
+            		{img:Case1,link:'/case/bx',name:'本姓酒'},
             		{img:Case2,link:'',name:'Fortes'},
             		{img:Case3,link:'',name:'爱丽舍'},
             		{img:Case4,link:'',name:'汉凯'},
