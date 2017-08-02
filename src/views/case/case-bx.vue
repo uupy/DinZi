@@ -38,11 +38,14 @@
 				<img src='../../assets/images/11.jpg'/>
 			</el-row>
 			<el-row class='bx-content'>
+				<img src='../../assets/images/12.jpg'/>
+			</el-row>
+			<el-row class='bx-content'>
 				<img src='../../assets/images/13.jpg'/>
 			</el-row>
 			<el-row class='bx-content'>
-				<img src='../../assets/images/12.jpg'/>
-			</el-row>	
+				<img src='../../assets/images/14.jpg'/>
+			</el-row>
 			<el-row class='bx-content'>
 				<img src='../../assets/images/15.jpg'/>
 			</el-row>
