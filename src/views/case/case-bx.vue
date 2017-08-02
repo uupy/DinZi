@@ -29,9 +29,6 @@
 				<img src='../../assets/images/8.jpg'/>
 			</el-row>
 			<el-row class='bx-content'>
-				<img src='../../assets/images/1.jpg'/>
-			</el-row>
-			<el-row class='bx-content'>
 				<img src='../../assets/images/9.jpg'/>
 			</el-row>
 			<el-row class='bx-content'>
@@ -41,14 +38,11 @@
 				<img src='../../assets/images/11.jpg'/>
 			</el-row>
 			<el-row class='bx-content'>
-				<img src='../../assets/images/12.jpg'/>
-			</el-row>
-			<el-row class='bx-content'>
 				<img src='../../assets/images/13.jpg'/>
 			</el-row>
 			<el-row class='bx-content'>
-				<img src='../../assets/images/14.jpg'/>
-			</el-row>
+				<img src='../../assets/images/12.jpg'/>
+			</el-row>	
 			<el-row class='bx-content'>
 				<img src='../../assets/images/15.jpg'/>
 			</el-row>
@@ -104,5 +98,5 @@
 </script>
 <style lang='less'>
 	.bx-content{}
-	.bx-content img{max-width: 100%;}
+	.bx-content img{max-width: 100%;display: block;}
 </style>
