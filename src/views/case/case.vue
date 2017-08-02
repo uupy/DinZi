@@ -240,7 +240,7 @@
             		{src:Banner3,link:'',alt:'',index:3},
             	],
             	caseList:[
-            		{img:Case1,link:'',name:'本姓酒'},
+            		{img:Case1,link:'/case/bx',name:'本姓酒'},
             		{img:Case2,link:'',name:'Fortes'},
             		{img:Case3,link:'',name:'爱丽舍'},
             		{img:Case4,link:'',name:'汉凯'},

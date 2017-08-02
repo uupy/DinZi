@@ -6,8 +6,11 @@ const Home = resolve => require(['@/views/home.vue'], resolve)
 const Index = resolve => require(['@/views/home/index.vue'], resolve)
 const Case = resolve => require(['@/views/case/case.vue'], resolve)
 const CaseMh = resolve => require(['@/views/case/case-mh.vue'], resolve)
+const CaseBx = resolve => require(['@/views/case/case-bx.vue'], resolve)
 const About = resolve => require(['@/views/about/about.vue'], resolve)
 const News = resolve => require(['@/views/news/news.vue'], resolve)
+const DinzNews = resolve => require(['@/views/news/dz-dongtai.vue'], resolve)
+const HYZX = resolve => require(['@/views/news/hyzx.vue'], resolve)
 const CompanyIntro = resolve => require(['@/views/about/company.vue'], resolve)
 const Points = resolve => require(['@/views/about/points.vue'], resolve)
 const JoinUs = resolve => require(['@/views/about/join-us.vue'], resolve)
@@ -41,6 +44,11 @@ export default new Router({
         {
           path: '/case/mh',
           component: CaseMh,
+          name: ''
+        },
+        {
+          path: '/case/bx',
+          component: CaseBx,
           name: ''
         }
       ]
@@ -89,7 +97,19 @@ export default new Router({
         children: [{
           path: '/news/',
           component: News,
-          name: ''
+          name: '',
+          children:[
+            {
+                path:'/dzdt',
+                name:'丁子动态',
+                component:DinzNews
+            },
+            {
+                path:'/hyzx',
+                name:'行业资讯',
+                component:HYZX
+            }
+          ]
       }]
     }
   ]
