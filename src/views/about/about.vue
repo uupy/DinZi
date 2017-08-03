@@ -58,7 +58,7 @@
 				],
 				aboutNav:[
 					{name:'公司介绍',link:'/company'},
-					{name:'丁子观点',link:'/points'},
+					// {name:'丁子观点',link:'/points'},
 					{name:'人才招聘',link:'/join-us'},
 					{name:'合作伙伴',link:'/coorper'},
 					{name:'联系我们',link:'/contact'},
