@@ -66,8 +66,35 @@
 					<el-col class='more'>					
 						<span class='more-btn' @click='joinDinz'>Join DiNZ</span>
 					</el-col>
-				</el-col>	
-
+				</el-col>
+				<el-col class='news-title'>
+					<h2>我们能做什么</h2>
+				</el-col>
+				<el-col class='news whattodo'>
+					<el-col :span='22' :offset='1'>
+						<el-col :span='8' class='news-wrap'>
+							<ul>
+								<li v-for='item in whattodo1'>
+									{{item.title}}
+								</li>
+							</ul>
+						</el-col>
+						<el-col :span='8' class='news-wrap'>
+							<ul>
+								<li v-for='item in whattodo2'>
+									{{item.title}}
+								</li>
+							</ul>
+						</el-col>
+						<el-col :span='8' class='news-wrap'>
+							<ul>
+								<li v-for='item in whattodo3'>
+									{{item.title}}
+								</li>
+							</ul>
+						</el-col>
+					</el-col>
+				</el-col>
 				<el-col class='news'>
 					<el-col :span='22' :offset='1'>
 						<el-col :span='8' class='news-wrap'>
@@ -184,8 +211,8 @@
 
 	.news-wrap ul{position: relative}
 	.news-wrap ul:after{content:'';content:'';display: block;width:16px;height: 1px;background: #999;position: absolute;left:0;bottom: -12px;}
-
-
+	.news-title h2{font-size:30px;color: #666;text-align:center;}
+	.whattodo ul li:first-child{color: #666;font-weight:bold;}
 	@media screen and (max-device-width:768px){
 		.home_content{border-top:2px solid #fff;}
 		.case-wrap>div{width: 50%}
@@ -228,8 +255,6 @@
 	import Case12 from '../../../static/images/img_case_12.jpg'
 	import Case13 from '../../../static/images/img_case_13.jpg'
 	import Case14 from '../../../static/images/img_case_14.jpg'
-
-
 
 	export default{
 		data(){
@@ -276,8 +301,35 @@
             		{title:'原研哉公开2020年东京奥运会LOGO',link:''},
             		{title:'美国时装品牌Calvin Klein更换新LOGO',link:''},
             		{title:'小米公司松果电子品牌LOGO',link:''},
+            	],
+            	whattodo1:[
+            		{title:'品牌定位 >',link:''},
+            		{title:'品牌理念与文化',link:''},
+            		{title:'品牌故事',link:''},
+            		{title:'品牌命名',link:''},
+            		{title:'品牌口号',link:''},
+            		{title:'品牌全案策划',link:''},
+            		{title:'品牌基因创建',link:''},
+            	],
+            	whattodo2:[
+            		{title:'品牌形象设计 >',link:''},
+            		{title:'品牌VIS设计',link:''},
+            		{title:'品牌改造升级',link:''},
+            		{title:'品牌网站设计',link:''},
+            		{title:'包装设计',link:''},
+            		{title:'画册设计',link:''},
+            		{title:'宣传物料设计',link:''},
+            		{title:'海报设计',link:''},
+            	],
+            	whattodo3:[
+            		{title:'电商设计 >',link:''},
+            		{title:'电商首页设计',link:''},
+            		{title:'产品详情设计',link:''},
+            		{title:'创意海报设计',link:''},
+            		{title:'活动专题页设计',link:''},
+            		{title:'产品拍摄',link:''},
+            		{title:'专业修图',link:''}
             	]
-
 			}
 		},
 		created(){
