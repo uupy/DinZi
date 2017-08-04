@@ -255,6 +255,11 @@
 	import Case12 from '../../../static/images/img_case_12.jpg'
 	import Case13 from '../../../static/images/img_case_13.jpg'
 	import Case14 from '../../../static/images/img_case_14.jpg'
+	import Case15 from '../../../static/images/img_case_15.jpg'
+	import Case16 from '../../../static/images/img_case_16.jpg'
+	import Case17 from '../../../static/images/img_case_17.jpg'
+	import Case18 from '../../../static/images/img_case_18.jpg'
+	import Case19 from '../../../static/images/img_case_19.jpg'
 
 	export default{
 		data(){
@@ -276,7 +281,7 @@
             		{img:Case9,link:'',name:'优央'},
             		{img:Case10,link:'',name:'尚里'},
             		{img:Case11,link:'',name:'本姓酒'},
-            		{img:Case12,link:'',name:'Epire'},
+            		{img:Case12,link:'/case/ax',name:'Epire'},
             		{img:Case13,link:'',name:'紫罗兰'},
             		{img:Case14,link:'',name:'灵丹瑜伽'},
             		// {img:'',link:'',name:'更多案例>>'},
