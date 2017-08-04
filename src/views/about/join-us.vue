@@ -96,7 +96,7 @@
 					,
 					{date:'HR邮箱',jobName:'HR邮箱',isShow:false,
 						demans:[
-							{title:'38333@qq.com'}
+							{title:'383334684@qq.com'}
 						]
 					}
 				]
