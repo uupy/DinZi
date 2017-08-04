@@ -57,7 +57,7 @@
 	.optiscroll-vtrack{width: 6px;}
 	.pageheader{position: relative;z-index: 9999999;}
 	.back-top{position: fixed;right:20px;bottom: 20px;z-index:99999;opacity: 0;transition:0.4s;}
-	.icon-backtop{font-size: 30px;cursor:pointer;color: #999;}
+	.icon-backtop{font-size: 30px;cursor:pointer;color: #d7a717;}
 	@media screen and (max-width: 768px) {
 		@pageHeight:70px;
 		.page_content{margin-top: @pageHeight}
