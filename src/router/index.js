@@ -7,6 +7,8 @@ const Index = resolve => require(['@/views/home/index.vue'], resolve)
 const Case = resolve => require(['@/views/case/case.vue'], resolve)
 const CaseMh = resolve => require(['@/views/case/case-mh.vue'], resolve)
 const CaseBx = resolve => require(['@/views/case/case-bx.vue'], resolve)
+const CaseHl = resolve => require(['@/views/case/case-hl.vue'], resolve)
+const CaseKm = resolve => require(['@/views/case/case-km.vue'], resolve)
 const About = resolve => require(['@/views/about/about.vue'], resolve)
 const News = resolve => require(['@/views/news/news.vue'], resolve)
 const DinzNews = resolve => require(['@/views/news/dz-dongtai.vue'], resolve)
@@ -49,6 +51,16 @@ export default new Router({
         {
           path: '/case/bx',
           component: CaseBx,
+          name: ''
+        },
+        {
+          path: '/case/hl',
+          component: CaseHl,
+          name: ''
+        },
+        {
+          path: '/case/km',
+          component: CaseKm,
           name: ''
         }
       ]
