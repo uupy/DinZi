@@ -9,6 +9,10 @@ const Case = resolve => require(['@/views/case/case.vue'], resolve)
 const CaseMh = resolve => require(['@/views/case/case-mh.vue'], resolve)
 const CaseBx = resolve => require(['@/views/case/case-bx.vue'], resolve)
 const CaseAx = resolve => require(['@/views/case/case-ax.vue'], resolve)
+const CaseHl = resolve => require(['@/views/case/case-hl.vue'], resolve)
+const CaseKm = resolve => require(['@/views/case/case-km.vue'], resolve)
+const CaseFts = resolve => require(['@/views/case/case-fts.vue'], resolve)
+const CaseKy = resolve => require(['@/views/case/case-ky.vue'], resolve)
 
 const About = resolve => require(['@/views/about/about.vue'], resolve)
 const News = resolve => require(['@/views/news/news.vue'], resolve)
@@ -55,8 +59,28 @@ export default new Router({
           name: ''
         },
         {
+<<<<<<< HEAD
           path: '/case/ax',
           component: CaseAx,
+=======
+          path: '/case/hl',
+          component: CaseHl,
+          name: ''
+        },
+        {
+          path: '/case/km',
+          component: CaseKm,
+          name: ''
+        },
+        {
+          path: '/case/fts',
+          component: CaseFts,
+          name: ''
+        },
+        {
+          path: '/case/ky',
+          component: CaseKy,
+>>>>>>> 7524b21e357bf4fb2a5f0a3a57cabbcbf924dcc9
           name: ''
         }
       ]
