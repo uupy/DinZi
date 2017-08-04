@@ -241,12 +241,12 @@
 	import Banner2 from '../../../static/images/banner_home_02.jpg'
 	import Banner3 from '../../../static/images/banner_home_03.jpg'
 
-	import Case1 from '../../../static/images/img_case_01.jpg'
-	import Case2 from '../../../static/images/img_case_02.jpg'
-	import Case3 from '../../../static/images/img_case_03.jpg'
-	import Case4 from '../../../static/images/img_case_04.jpg'
+	import Case_bxj from '../../../static/images/img_case_01.jpg'
+	import Case_fts from '../../../static/images/img_case_02.jpg'
+	import Case_als from '../../../static/images/img_case_03.jpg'
+	import Case_hk from '../../../static/images/img_case_04.jpg'
 	import Case5 from '../../../static/images/img_case_05.jpg'
-	import Case6 from '../../../static/images/img_case_06.jpg'
+	import Case_mh from '../../../static/images/img_case_06.jpg'
 	import Case7 from '../../../static/images/img_case_07.jpg'
 	import Case8 from '../../../static/images/img_case_08.jpg'
 	import Case9 from '../../../static/images/img_case_09.jpg'
@@ -255,11 +255,11 @@
 	import Case12 from '../../../static/images/img_case_12.jpg'
 	import Case13 from '../../../static/images/img_case_13.jpg'
 	import Case14 from '../../../static/images/img_case_14.jpg'
-	import Case15 from '../../../static/images/img_case_15.jpg'
-	import Case16 from '../../../static/images/img_case_16.jpg'
-	import Case17 from '../../../static/images/img_case_17.jpg'
-	import Case18 from '../../../static/images/img_case_18.jpg'
-	import Case19 from '../../../static/images/img_case_19.jpg'
+	import Case_ax from '../../../static/images/img_case_15.jpg'
+	import Case_ky from '../../../static/images/img_case_16.jpg'
+	// import Case_fts from '../../../static/images/img_case_17.jpg'
+	import Case_hl from '../../../static/images/img_case_18.jpg'
+	import Case_km from '../../../static/images/img_case_19.jpg'
 
 	export default{
 		data(){
@@ -270,20 +270,24 @@
             		{src:Banner3,link:'',alt:'',index:3},
             	],
             	caseList:[
-            		{img:Case1,link:'/case/bx',name:'本姓酒'},
-            		{img:Case2,link:'',name:'Fortes'},
-            		{img:Case3,link:'',name:'爱丽舍'},
-            		{img:Case4,link:'',name:'汉凯'},
+            		{img:Case_bxj,link:'/case/bx',name:'本姓酒'},
+            		{img:Case_mh,link:'/case/mh',name:'慢猴'},
+            		{img:Case_ax,link:'/case/ax',name:'爱鲜'},
+            		{img:Case_km,link:'/case/km',name:'卡盟卡修'},
+            		{img:Case_ky,link:'/case/ky',name:'道一空忧'},
+            		{img:Case_fts,link:'/case/fts',name:'福特斯'},
+            		{img:Case_hl,link:'/case/hl',name:'豪麟'},
+            		{img:Case_als,link:'',name:'爱丽舍'},
+            		{img:Case_hk,link:'',name:'汉凯'},
             		{img:Case5,link:'',name:'Smile Cakes'},
-            		{img:Case6,link:'/case/mh',name:'慢猴'},
             		{img:Case7,link:'',name:'草橙酒业'},
             		{img:Case8,link:'',name:'Inhuo'},
             		{img:Case9,link:'',name:'优央'},
             		{img:Case10,link:'',name:'尚里'},
-            		{img:Case11,link:'',name:'本姓酒'},
-            		{img:Case12,link:'/case/ax',name:'Epire'},
+            		{img:Case12,link:'',name:'Epire'},
             		{img:Case13,link:'',name:'紫罗兰'},
             		{img:Case14,link:'',name:'灵丹瑜伽'},
+            		// {img:Case11,link:'',name:'本姓酒'},
             		// {img:'',link:'',name:'更多案例>>'},
             	],
             	newsList1:[

@@ -59,10 +59,11 @@ export default new Router({
           name: ''
         },
         {
-<<<<<<< HEAD
           path: '/case/ax',
           component: CaseAx,
-=======
+          name: ''
+        },
+        {
           path: '/case/hl',
           component: CaseHl,
           name: ''
@@ -80,7 +81,6 @@ export default new Router({
         {
           path: '/case/ky',
           component: CaseKy,
->>>>>>> 7524b21e357bf4fb2a5f0a3a57cabbcbf924dcc9
           name: ''
         }
       ]
